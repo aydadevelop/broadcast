@@ -1,0 +1,583 @@
+@font-face {
+    font-family: "SinkinSans";
+    src: url("../font/sinkin-sans-family/SinkinSans-400Regular.woff2") format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SinkinSans";
+    src: url("../font/sinkin-sans-family/SinkinSans-700Bold.woff2") format('woff2');
+    font-weight: bold;
+}
+
+html {
+    font-family: 'SinkinSans';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: #221736;
+    padding: 0 136px;
+}
+
+.header-logo {
+    width: 230px;
+    object-fit: contain;
+}
+
+.header-button {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+    white-space: nowrap;
+    text-decoration: none;
+    display: flex;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #66a01a;
+    border-image-slice: 1;
+}
+.contact-img{
+    margin-left: 12px;
+    width: 20px;
+    height: 24px;
+}
+
+.header-contact {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'SinkinSans';
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.contact-button-block{
+    margin-left: auto;
+    display: flex;
+}
+
+.presentation-block {
+    background-color: #221736;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+}
+
+.presentation-content {
+    max-width: 1408px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12px;
+}
+
+.presentation-title {
+    font-family: 'SinkinSans';
+    font-weight: 400;
+    font-size: 64px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 88px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-top: 76px;
+}
+
+.presentation-text {
+    font-weight: 400;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 48px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.presentation-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 12px 32px;
+    border-radius: 28px;
+    background-image: linear-gradient(100deg, #94d355, #69a31e 89%);
+}
+.presentation-button p{
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.button-top {
+    margin-top: 52px;
+}
+
+.presentation-photo {
+    width: 100%;
+    margin-top: 146px;
+}
+
+.contact-button {
+    text-align: center;
+}
+
+.advantage {
+    max-width: 1648px;
+    margin-top: 36%;
+    padding: 0 12px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage-card {
+    display: flex;
+    flex-direction: row;
+    margin-top: 128px;
+}
+
+.card-title {
+    font-family: 'SinkinSans';
+    font-size: 56px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 76px;
+    letter-spacing: normal;
+    color: #333;
+}
+
+.card-text {
+    font-family: 'SinkinSans';
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: normal;
+    color: #333;
+    font-weight: 400;
+    margin-top: 24px;
+}
+
+.card-text-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+}
+
+.margin-left {
+    margin-left: 64px;
+}
+
+.margin-right {
+    margin-right: 64px;
+}
+
+.card-img {
+    width: 50%;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    padding: 128px 136px;
+}
+
+.experience-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+}
+
+.experience-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+}
+
+.experience-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-text {
+    font-weight: 400;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #333;
+    margin-top: 31px;
+}
+
+.experience-logo {
+    margin-top: 24px;
+    width: 30%;
+}
+
+.experience-title-text {
+    font-weight:bold 700;
+    font-size: 40px;
+    /* font-weight: bold; */
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 88px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+}
+
+.experience-line {
+    width: 14%;
+    height: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 12.5px;
+    background-color: #333;
+}
+
+.creating {
+    background-color: #221736;
+    padding: 57px 136px;
+    display: flex;
+    flex-direction: column;
+}
+
+.creating-text {
+    font-weight: 400;
+    font-size: 40px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.button-bottom {
+    margin-top: 39px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #21252e;
+    padding: 14px 136px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-left-text {
+    font-weight: 400;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #fff;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 40px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.footer-right-text {
+    font-weight: 400;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #fff;
+    margin-bottom: auto;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.footer-right-line {
+    width: 1px;
+    height: 16px;
+    background-color: aliceblue;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.cpointer {
+    cursor: pointer;
+}
+
+@media(max-width:1280px){
+    .presentation-title{
+        font-size: 56px;
+        line-height: 80px;
+    }
+    .presentation-text{
+        font-size: 28px;
+        line-height: 44px;
+    }
+    .advantage {
+        max-width: 1016px;
+        /* margin-top: 402px; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-title{
+        font-size: 48px;
+        line-height: 64px;
+    }
+    .card-text{
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .experience-title-text{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .experience-line{
+        width: 4%;
+    }
+    .experience-text{
+        font-size: 24px;
+        line-height: 1.67;
+    }
+    .creating-text{
+        font-size: 28px;
+    }
+    .footer-right-text{
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    .footer-left-text{
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    .header-logo{
+        width: 192px;
+    }
+}
+@media (max-width: 1100px) {
+  
+    .header{
+        padding: 10px 12px;
+    }
+    .radius-img{
+        border-radius: 42px;
+    }
+    .contact-button-block {
+        display: none !important;
+    }
+
+    .presentation-block {
+        padding: 0 12px !important;
+        height: 800px !important;
+    }
+
+    .presentation-button {
+        margin-top: 32px !important;
+        margin-bottom: 54px !important;
+    }
+
+    .presentation-photo {
+        margin-top: 0 !important;
+    }
+
+    .advantage-card {
+        flex-direction: column;
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .margin-left {
+        margin-left: 0px !important;
+    }
+
+    .card-text-content {
+        margin-top: 16px;
+        width: 100% !important;
+    }
+
+
+    .experience {
+        margin-top: 96px !important;
+        margin-bottom: 96px !important;
+        padding: 0 12px !important;
+    }
+
+    .experience-line {
+        display: none !important;
+    }
+
+    .experience-info {
+        flex-direction: column !important;
+    }
+
+    .experience-left {
+        width: 100% !important;
+    }
+
+    .experience-right {
+        margin-top: 96px !important;
+        width: 100% !important;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 24px 36px;
+        align-items: center;
+    }
+
+    .footer-left {
+        flex-direction: column !important;
+    }
+
+    .footer-right {
+        margin-left: 0 !important;
+    }
+
+    .footer-left-text {
+        margin-left: 0 !important;
+    }
+    .reverse{
+        flex-direction: column-reverse !important;
+    }
+}
+@media(max-width:768px){
+    .card-title {
+        font-size: 24px;
+        line-height: 36pxw;
+    }
+    .creating-text{
+        font-size: 16px;
+    }
+    .creating {
+        padding: 14px 15px 24px 15px;
+    }
+    .footer-right-text{
+        font-size: 10px;
+    }
+    .experience-title-text {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+        text-align: center;
+        width: 100%;
+    }
+    .advantage {
+        /* margin-top: 96px; */
+        padding: 0 12px;
+    }
+    .advantage-card {
+        margin-top: 0;
+        margin-bottom: 96px;
+    }
+
+    .presentation-block {
+        padding: 0 12px !important;
+        height: 472px !important;
+    }
+
+    .presentation-title {
+        margin-top: 34px;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 700;
+    }
+    .presentation-text {
+        margin-top: 19px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .presentation-button p{
+        font-size: 19.4px;
+    }
+    .button-bottom {
+        margin-bottom: 0px !important;
+        margin-top: 20px !important;
+    }
+    .experience-text{
+        font-size: 16px;
+    }
+    .card-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 8px;
+    }
+    .experience {
+        margin-top: 0 !important;
+    }
+    .experience-info{
+        margin-top: 16px !important;
+    } 
+    .experience-logo{
+        margin-top: 16px !important;
+    }
+    .experience-text {
+        margin-top: 12px !important;
+    }
+    .header-logo {
+        width: 192px;
+        object-fit: contain;
+    }
+    .footer-left{
+        align-items: center;
+    }
+    .footer-left-text{
+        font-size: 10px;
+    }
+    .reverse{
+        flex-direction: column-reverse !important;
+    }
+}

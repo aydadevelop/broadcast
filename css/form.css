@@ -142,7 +142,7 @@ html {
 
 .label-font-style{
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -244,13 +244,18 @@ html {
     display: flex;
 }
 input{
-    font-size: 30px;
+    font-size: 18px;
     padding-left: 10px;
     width: 100%;
+    box-sizing: border-box;
+    font-family: 'SinkinSans';
 }
 textarea{
-    font-size: 30px;
+    font-family: 'SinkinSans';
+    font-size: 18px;
     padding-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
 }
 
 @media(max-width:1280px){
@@ -306,7 +311,8 @@ textarea{
     }
     
 }
-@media(max-width:780px){
+
+@media(max-width:768px){
     .form{
         flex-direction: column;
         padding: 32px 12px 72px 12px;
@@ -323,9 +329,6 @@ textarea{
         min-height: 0;
     }
     
-}
-
-@media(max-width:768px){
     .input-left{
         height: 32px;
     }
@@ -333,7 +336,7 @@ textarea{
         margin-right: 24px;
     }
     input{
-        font-size: 20px;
+        font-size: 16px;
     }
         
     .header-logo {
@@ -350,7 +353,7 @@ textarea{
         align-items: center;
     }
     .form-title{
-        font-size: 18px;
+        font-size: 28px;
     }
     .title-p{
         font-size: 14px;

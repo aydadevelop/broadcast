@@ -313,6 +313,9 @@ textarea{
 }
 
 @media(max-width:768px){
+    .break{
+        display: none;
+    }
     .form{
         flex-direction: column;
         padding: 32px 12px 72px 12px;

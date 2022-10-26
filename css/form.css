@@ -60,7 +60,6 @@ html {
     padding: 32px 0;
 }
 .form-title{
-    font-weight: 400;
     font-size: 64px;
     font-weight: bold;
     font-stretch: normal;
@@ -70,7 +69,6 @@ html {
     color: #fff;
 }
 .title-p{
-    font-weight: 400;
     font-size: 32px;
     font-weight: normal;
     font-stretch: normal;
@@ -141,8 +139,7 @@ html {
 }
 
 .label-font-style{
-    font-weight: 400;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -197,7 +194,6 @@ html {
     flex-direction: row;
 }
 .footer-left-text{
-    font-weight: 400;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -215,7 +211,6 @@ html {
     margin-left: auto;
 }
 .footer-right-text{
-    font-weight: 400;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -373,5 +368,8 @@ textarea{
     }
     .form-textarea {
         height: 191px;
+    }
+    .label-font-style{
+        font-size: 14px;
     }
 }

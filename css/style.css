@@ -86,7 +86,6 @@ html {
 
 .presentation-title {
     font-family: 'SinkinSans';
-    font-weight: 400;
     font-size: 64px;
     font-weight: bold;
     font-stretch: normal;
@@ -99,7 +98,6 @@ html {
 }
 
 .presentation-text {
-    font-weight: 400;
     font-size: 32px;
     font-weight: normal;
     font-stretch: normal;
@@ -182,7 +180,6 @@ html {
     line-height: 40px;
     letter-spacing: normal;
     color: #333;
-    font-weight: 400;
     margin-top: 24px;
 }
 
@@ -240,7 +237,6 @@ html {
 }
 
 .experience-text {
-    font-weight: 400;
     font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
@@ -264,7 +260,6 @@ html {
 .experience-title-text {
     font-weight:bold 700;
     font-size: 40px;
-    /* font-weight: bold; */
     font-stretch: normal;
     font-style: normal;
     line-height: 60px;

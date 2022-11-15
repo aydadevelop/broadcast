@@ -6,6 +6,8 @@ require_once $rootPath.'inc/config.php';
 
 $pageTitle = $siteName.' - Thank You';
 
+$ogMetaUrl = $secureURL.'/thankyou/';
+require_once $rootPath.'_ogMetaData.php';
 require_once $rootPath.'_header.php';
 
 ?>

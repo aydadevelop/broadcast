@@ -23,6 +23,8 @@
         echo '<link rel="stylesheet" href="/css/thanks.css" type="text/css">';
     }
 
+    if (isset($ogMetaData) && !empty($ogMetaData)){echo $ogMetaData;}
+
     ?>
     
 </head>

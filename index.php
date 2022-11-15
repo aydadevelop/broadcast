@@ -4,8 +4,13 @@ ob_start("ob_gzhandler");
 $rootPath = '';
 require_once $rootPath.'inc/config.php';
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $setHomeCanonical = '<link rel="canonical" href="'.$secureURL.'" />';
 
+$ogMetaUrl = $secureURL;
+require_once $rootPath.'_ogMetaData.php';
 require_once $rootPath.'_header.php';
 
 ?>

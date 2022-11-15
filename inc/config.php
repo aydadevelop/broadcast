@@ -7,7 +7,7 @@ $siteName = 'Interactive Platforms';
 $secureURL = 'https://interactiveplatforms.com';
 
 $pageTitle = $siteName;
-$pageDescription = 'Live, audience-interactive broadcasts on a global scale.';
+$pageDescription = 'Audience-interactive broadcasts on a global scale.';
 
 $supportEmail = 'support@team.couple.com';
 
@@ -19,5 +19,11 @@ if(isset($_SERVER['HTTP_REFERER']))
 {
 	$HTTP_REFERER = $_SERVER['HTTP_REFERER'];
 }
+
+$ogMetaType = 'website';
+$ogMetaImg = $secureURL.'/assets/ip_product_hero_1x1.91.jpg';
+$ogMetaImgAlt = $siteName;
+// $twitterHandle = '@CoupleDatingApp';
+$twitterMetaImg = $secureURL.'/assets/ip_product_hero_1x1.jpg';
 
 ?>

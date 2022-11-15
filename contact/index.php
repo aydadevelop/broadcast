@@ -6,6 +6,8 @@ require_once $rootPath.'inc/config.php';
 
 $pageTitle = $siteName.' - Contact Us';
 
+$ogMetaUrl = $secureURL.'/contact/';
+require_once $rootPath.'_ogMetaData.php';
 require_once $rootPath.'_header.php';
 
 ?>

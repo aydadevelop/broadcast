@@ -57,6 +57,7 @@ require_once $rootPath.'_header.php';
             <textarea id="help" name="help" rows="10" class="form-textarea textarea-style border-style" maxlength="1000"></textarea>
             <button class="form-button cpointer">Submit</button>
         </div>
+        <input type="hidden" name="<?= CONTACTFORM_ID ?>" value="<?= CONTACTFORM_VAL ?>">
     </form>
 
 <script>

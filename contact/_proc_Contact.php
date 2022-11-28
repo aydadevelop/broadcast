@@ -7,12 +7,27 @@ require_once $rootPath.'inc/email.php';
 
 $redirectThanks = '/thankyou/';
 $redirectError = '/contact/';
+$sendAlert = false;
 
 date_default_timezone_set('UTC');
 $todayDate = date('Y-m-d H:i:s');
 
+$contactFormVal = (isset($_POST[CONTACTFORM_ID]) ) ? trim($_POST[CONTACTFORM_ID]) : '';
+if (empty($contactFormVal))
+{
+    header('Location: '.$redirectThanks);
+    exit();
+}
+else if ($contactFormVal != CONTACTFORM_VAL)
+{
+    header('Location: '.$redirectThanks);
+    exit();
+}
+
 $checkDate = date('Y-m-d H:i:s',strtotime($todayDateCheck. '-1 day'));
-$ipList = ['178.68.119.51','182.16.184.67','201.47.2.246','144.48.49.67'];
+$ipList = ['85.208.115.246','5.227.27.149','191.102.181.207','178.68.119.51','84.17.43.36','182.16.184.67','201.47.2.246','194.36.96.30','144.48.49.67','188.126.89.116','94.158.36.183','196.16.74.206','14.179.177.59','196.196.246.25','194.36.97.209','138.199.36.200'];
+
+$emailList = ['ericjonesmyemail@gmail.com','no-replywaxia@gmail.com'];
 
 if (!empty($VISITORIP) && in_array($VISITORIP, $ipList))
 {
@@ -53,6 +68,22 @@ if (empty($fname) || empty($lname) || empty($email) || empty($job) || empty($com
     exit();
 }
 
+if (in_array($email, $emailList))
+{
+    header('Location: '.$redirectThanks);
+    exit();
+}
+else if (strpos($website, 'boostlead') !== false || strpos($company, 'boostlead') !== false)
+{
+    header('Location: '.$redirectThanks);
+    exit();
+}
+
+if (!validUrl($website))
+{
+    $sendAlert = true;
+}
+
 $error = '';
 
 if (strlen($info) > 1000)
@@ -74,25 +105,30 @@ if (!empty($chkData))
     if (count($gotEmail) > 0)
     {
         // user already submitted recently - send alert email and redirect
-        $alertTo = 'tpanovec@corp.lawyer.com';
-        $emailSubj = 'Interactive Platforms - Contact Abuse';
-
-        $comment = "*Internal System Message Notice*\n\n";
-        $comment .= "$emailSubj";
-        $comment .= "\n\nName: $fname $lname";
-        $comment .= "\n\nEmail: $email";
-        $comment .= "\n\nJob: $job";
-        $comment .= "\n\nCo.: $company";
-        $comment .= "\n\nWebsite: $website";
-        $comment .= "\n\nPhone: $phone";
-        $comment .= "\n\nInfo: $info";
-        $comment .= "\n\nIP: $VISITORIP";
-        
-        sendSendGridEmail('html', $supportEmail, $alertTo, '', $emailSubj, nl2br($comment), 'Support Notification Email Internal');
-
-        header('Location: '.$redirectThanks);
-        exit();
+        $sendAlert = true;
     }
+}
+
+if ($sendAlert)
+{
+    $alertTo = 'tpanovec@corp.lawyer.com';
+    $emailSubj = 'Interactive Platforms - Contact Abuse';
+
+    $comment = "*Internal System Message Notice*\n\n";
+    $comment .= "$emailSubj";
+    $comment .= "\n\nName: $fname $lname";
+    $comment .= "\n\nEmail: $email";
+    $comment .= "\n\nJob: $job";
+    $comment .= "\n\nCo.: $company";
+    $comment .= "\n\nWebsite: $website";
+    $comment .= "\n\nPhone: $phone";
+    $comment .= "\n\nInfo: $info";
+    $comment .= "\n\nIP: $VISITORIP";
+    
+    sendSendGridEmail('html', $supportEmail, $alertTo, '', $emailSubj, nl2br($comment), 'Support Notification Email Internal');
+
+    header('Location: '.$redirectThanks);
+    exit();
 }
 
 try
@@ -133,6 +169,11 @@ if (empty($error))
 }
 
 // --- functions --- 
+
+function validUrl($url)
+{
+    return preg_match('/^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/', $url);
+}
 
 function checkSubmit($dbConn)
 {

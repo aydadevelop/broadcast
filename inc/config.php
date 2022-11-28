@@ -20,6 +20,9 @@ if(isset($_SERVER['HTTP_REFERER']))
 	$HTTP_REFERER = $_SERVER['HTTP_REFERER'];
 }
 
+define('CONTACTFORM_ID', '_iu21teuyi2uyq26etwgd-_u6e3257_');
+define('CONTACTFORM_VAL', 'kLK1credLZuqoTRU9aqOstuf0_1w69er6cl');
+
 $ogMetaType = 'website';
 $ogMetaImg = $secureURL.'/assets/ip_product_hero_1x1.91.jpg';
 $ogMetaImgAlt = $siteName;

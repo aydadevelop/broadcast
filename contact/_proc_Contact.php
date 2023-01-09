@@ -25,9 +25,9 @@ else if ($contactFormVal != CONTACTFORM_VAL)
 }
 
 $checkDate = date('Y-m-d H:i:s',strtotime($todayDateCheck. '-1 day'));
-$ipList = ['85.208.115.246','5.227.27.149','191.102.181.207','178.68.119.51','84.17.43.36','182.16.184.67','201.47.2.246','194.36.96.30','144.48.49.67','188.126.89.116','94.158.36.183','196.16.74.206','14.179.177.59','196.196.246.25','194.36.97.209','138.199.36.200', '191.101.217.114'];
+$ipList = ['85.208.115.246','5.227.27.149','191.102.181.207','178.68.119.51','84.17.43.36','182.16.184.67','201.47.2.246','194.36.96.30','144.48.49.67','188.126.89.116','94.158.36.183','196.16.74.206','14.179.177.59','196.196.246.25','194.36.97.209','138.199.36.200', '191.101.217.114', '90.179.7.202', '37.139.53.81'];
 
-$emailList = ['ericjonesmyemail@gmail.com','no-replywaxia@gmail.com', 'atoncetry@gmail.com'];
+$emailList = ['ericjonesmyemail@gmail.com','no-replywaxia@gmail.com', 'atoncetry@gmail.com', 'faulding.clinton@googlemail.com'];
 
 if (!empty($VISITORIP) && in_array($VISITORIP, $ipList))
 {
@@ -73,7 +73,7 @@ if (in_array($email, $emailList))
     header('Location: '.$redirectThanks);
     exit();
 }
-else if (strpos($website, 'boostlead') !== false || strpos($company, 'boostlead') !== false)
+else if (strpos($website, 'boostlead') !== false || strpos($company, 'boostlead') !== false || strpos($website, 'hojagoak.com') !== false)
 {
     header('Location: '.$redirectThanks);
     exit();
